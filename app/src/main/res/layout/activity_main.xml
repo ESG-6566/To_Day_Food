@@ -4,4 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity"
+    android:background="@drawable/main_activity_background_color"
+    android:clipToPadding="false">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="227dp"
+        android:layout_height="170dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cover_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:shapeAppearanceOverlay="@style/ImageView_round_corner"
+        tools:ignore="MissingConstraints,ImageContrastCheck"
+        android:clipToPadding="false"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="228dp"
+        android:layout_height="171dp"
+        android:background="@drawable/image_view_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="To Day Food"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:fontFamily="@font/far_koodak_bold" />
+
+    <LinearLayout
+        android:id="@+id/change_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/image_view_background"
+        android:contentDescription="@string/app_name"
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView"
+        app:layout_constraintVertical_bias="0.587">
+
+        <ImageView
+            android:id="@+id/change_Imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reset_icon_vector" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
